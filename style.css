@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.body {
+  height: 100vh;
+}
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: red;
+  height: 90px;
+}
+.header__image {
+  height: 70px;
+}
+.desktop__nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.desktop__nav li {
+  list-style: none;
+  display: inline-block;
+  padding: 1rem;
+}
+.desktop__nav a {
+  text-decoration: none;
+}
+.section {
+  display: flex;
+  flex-direction: row;
+}
+#menu__title {
+  font-weight: 500;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+/*ESTILOS DE CONTENEDOR DE CARDS Y CARDS*/
+.section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/*cards de menu y promociones*/
+.cardsStyle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  background: rgb(235, 230, 230);
+  border-radius: 0.5rem;
+  box-shadow: 0px 1px 10px rgb(41, 40, 40);
+}
+.cards:hover {
+  box-shadow: 5px 5px 20px rgb(39, 39, 39);
+}
+@media (min-width: 1080px) {
+  .cards {
+    margin-right: 3rem;
+  }
+}
+.cardsStyle .card__btn {
+  margin-bottom: 1rem;
+  color: black;
+  cursor: pointer;
+}
+.card__title {
+  margin-top: 1rem;
+  font-weight: 400;
+  text-align: center;
+}
+.card__precio {
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+.cardsStyle .cardImage {
+  width: 16rem;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+#section__title {
+  display: flexbox;
+
+  text-align: center;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: red;
+}
+
+.footer__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer__text {
+  margin: 1rem;
+}
+.footer__credits {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+p {
+  font-size: 0.6rem;
+  margin-bottom: 2rem;
+}
+
+img {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  display: inline;
+  width: 3rem;
+  text-align: center;
+}

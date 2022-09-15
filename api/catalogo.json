@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "imagen": "napo.jpg",
+    "name": "jamon crudo con provolone",
+    "precio": 1400
+  },
+  {
+    "id": 2,
+    "imagen": "muzzarella.jpg",
+    "name": "Muzzarella",
+    "precio": 1000
+  },
+  { "id": 3, "imagen": "chapignon.jpeg", "name": "Champignon", "precio": 1600 },
+  {
+    "id": 4,
+    "imagen": "chapignon.jpeg",
+    "name": "Especial Albahaca",
+    "precio": 1300
+  },
+  { "id": 5, "imagen": "napo.jpg", "name": "Napolitana", "precio": 1350 },
+  { "id": 6, "imagen": "chapignon.jpeg", "name": "Fugazzeta", "precio": 1200 }
+]
