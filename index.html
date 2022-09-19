@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/eb59184de1.js" crossorigin="anonymous"></script>
     <title>JS Proyecto Final</title>
   </head>
   <body class="body">
@@ -36,6 +37,7 @@
       </div>
     <div class="shopCart">
       <img src="imagenes/shopping_cart_icon.png" alt="shopCart" />
+      <button id="boton-carrito"><i class="fa-solid fa-cart-plus"></i><span id="contadorCarrito">0</span> </button>
     </div>
     <nav>
       
@@ -54,7 +56,23 @@
       </div> -->
       
     </section>
-    <h3>Carrito</h3>
+    <div class="modal-contenedor">
+<div class="modal-carrito">
+  <h3>Carrito</h3>
+  <button id="carritoCerrar"><i class="fa-solid fa-circle-xmark" style="color:red"; width="1rem"></i></button>
+  <div class="carrito-contenedor">
+<!-- div class="productoEnCarrito">
+  <p>Muzzarella</p>
+  <p>Precio: $1200</p> 
+  <button id="boton-eliminar" <i class="trash"></i></button>
+</div>-->
+  </div>
+  <p class="precioProducto">Precio total: $<span id="precioTotal">0</span></p>
+  <button id="vaciar-carrito" class="boton-agregar">Vaciar carrito</button>
+</div>
+
+    </div>
+   
     <div id= "carrito-contenedor">
       
     </div>

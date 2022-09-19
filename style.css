@@ -95,7 +95,9 @@ header {
 
   text-align: center;
 }
-
+.i .fa-solid fa-circle-xmark {
+  width: 1rem;
+}
 .footer {
   display: flex;
   flex-direction: column;
