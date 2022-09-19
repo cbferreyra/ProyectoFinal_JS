@@ -55,10 +55,10 @@ const renderProductos = async function () {
             div.innerHTML = `<p>${prod.name}</p>
 <p>Precio: ${prod.precio}</p>
 <p>Cantidad: <span id = "cantidad">${prod.cantidad}</span><p>
-<button id="eliminarCart"  class="boton-eliminar">eliminar</button>`;
+<button id="EliminarCart${prod.id}"  class="boton-eliminar">eliminar</button>`;
             contenedorCarrito.appendChild(div);
             document
-              .getElementById("eliminarCart")
+              .getElementById(`EliminarCart${prod.id}`)
               .addEventListener("click", eliminarDelCarrito);
           });
           contadorCarrito.innerText = carrito.length;
