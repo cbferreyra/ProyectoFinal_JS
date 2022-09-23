@@ -29,9 +29,17 @@ const renderProductos = async function () {
         boton.addEventListener("click", () => {
           agregarAlCarrito(cardItem.id);
         });
+
         const agregarAlCarrito = (prodId) => {
           const item = productos.find((elemento) => elemento.id == prodId);
-          carrito.push(item);
+          console.log(item);
+          const existe = carrito.some(function (objeto) {
+            return item.id === objeto.id;
+          });
+
+          if (existe) {
+            item.cantidad++;
+          } else carrito.push(item);
           actualizarCarrito();
           console.log(carrito);
         };
@@ -53,17 +61,24 @@ const renderProductos = async function () {
             const div = document.createElement("div");
             div.className = "productoEnCarrito";
             div.innerHTML = `<p>${prod.name}</p>
-<p>Precio: ${prod.precio}</p>
+<p>Precio unidad: ${prod.precio}</p>
 <p>Cantidad: <span id = "cantidad">${prod.cantidad}</span><p>
+<p>Precio: <span id = "precioPorProducto">$${
+              prod.precio * prod.cantidad
+            }</span></p>
 <button id="EliminarCart${prod.id}"  class="boton-eliminar">eliminar</button>`;
             contenedorCarrito.appendChild(div);
             document
               .getElementById(`EliminarCart${prod.id}`)
               .addEventListener("click", eliminarDelCarrito);
           });
-          contadorCarrito.innerText = carrito.length;
+          //contadorCarrito.innerText = carrito.length;
+          contadorCarrito.innerText = carrito.reduce(
+            (acc, prod) => acc + prod.cantidad,
+            0
+          );
           precioTotal.innerText = carrito.reduce(
-            (acc, prod) => acc + prod.precio,
+            (acc, prod) => acc + prod.precio * prod.cantidad,
             0
           );
         };
