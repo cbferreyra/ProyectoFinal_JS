@@ -93,14 +93,10 @@ const eliminarDelCarrito = (prodId) => {
 };
 const disminuir = (prodId) => {
   const item = carrito.find((elemento) => elemento.id == prodId);
-  const EnCarrito = carrito.some((objeto) => {
-    return item.id === objeto.id;
-  });
-
-  if (EnCarrito) {
+  if (item.cantidad > 1) {
     item.cantidad--;
   } else {
-    console.log("No esta");
+    eliminarDelCarrito();
   }
   actualizarCarrito();
 };
